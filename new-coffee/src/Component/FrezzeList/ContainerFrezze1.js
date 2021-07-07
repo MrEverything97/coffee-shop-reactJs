@@ -1,0 +1,30 @@
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { Grid } from '@material-ui/core';
+// import Button01 from '../Card/Button1/Button01';
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    width: 'auto',
+    margin: 'auto',
+    backgroundColor: 'white',
+    // minHeight: "300px"
+  },
+
+
+
+}));
+
+export default function FixedContainer() {
+  const classes = useStyles();
+  return (
+    <div className={classes.root}>
+      <Grid container alignItems="center" style={{width:'100%',paddingLeft:120}}>
+        <h1>Frezze Cà Phê Phin</h1>
+        <h3>Cà phê đá xay theo phong cách của người Việt! Dòng sản phẩm đá xay mát lạnh được pha chế từ cà phê Phin đậm đà, hòa quyện cùng thạch dai giòn sần sật cùng nhiều hương vị hấp dẫn khác.
+        </h3>
+        
+      </Grid>
+    </div>
+  );
+}

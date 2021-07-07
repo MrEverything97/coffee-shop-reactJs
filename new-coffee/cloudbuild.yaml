@@ -1,0 +1,17 @@
+steps:
+  - name: 'node:12'
+    entrypoint: yarn
+    args:
+      - install
+  - name: 'node:12'
+    entrypoint: yarn
+    args:
+      - run
+      - build
+  - name: 'gcr.io/House-com/firebase'
+    args:
+      - deploy
+      - --only
+      - hosting:coffee-house
+      - --token
+      - ${_FIREBASE_TOKEN}
